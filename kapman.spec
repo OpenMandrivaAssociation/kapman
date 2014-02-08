@@ -1,6 +1,6 @@
 Name:		kapman
 Version:	4.12.1
-Release:	1
+Release:	2
 Epoch:		1
 Summary:	A Pac-Man clone
 Group:		Graphical desktop/KDE
