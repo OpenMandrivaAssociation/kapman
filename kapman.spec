@@ -1,5 +1,5 @@
 Name:		kapman
-Version:	4.13.2
+Version:	4.13.3
 Release:	1
 Epoch:		1
 Summary:	A Pac-Man clone
@@ -38,6 +38,9 @@ the next stage with slightly increased game speed.
 %makeinstall_std -C build
 
 %changelog
+* Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.13.3-1
+- New version 4.13.3
+
 * Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.13.2-1
 - New version 4.13.2
 
