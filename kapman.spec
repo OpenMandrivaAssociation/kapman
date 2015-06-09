@@ -9,6 +9,14 @@ URL:		http://www.kde.org/applications/games/kapman/
 Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5NotifyConfig)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5KIO)
 
 %description
 Kapman is a clone of the well known game Pac-Man.
