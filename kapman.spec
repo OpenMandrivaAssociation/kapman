@@ -27,12 +27,14 @@ seconds. When a stage is cleared of pills and energizer the player is taken to
 the next stage with slightly increased game speed.
 
 %files
-%{_kde_bindir}/kapman
-%{_kde_applicationsdir}/kapman.desktop
-%{_kde_appsdir}/kapman
-%{_kde_docdir}/*/*/kapman
-%{_kde_iconsdir}/hicolor/*/apps/kapman.*
-%{_kde_datadir}/sounds/kapman
+%doc %{_docdir}/HTML/*/kapman
+%{_bindir}/kapman
+%{_datadir}/appdata/kapman.appdata.xml
+%{_datadir}/applications/org.kde.kapman.desktop
+%{_iconsdir}/hicolor/*/apps/kapman.png
+%{_datadir}/kapman
+%{_datadir}/kxmlgui5/kapman/kapmanui.rc
+%{_datadir}/sounds/kapman
 
 #------------------------------------------------------------------------------
 
