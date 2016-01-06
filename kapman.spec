@@ -17,6 +17,7 @@ BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5ConfigWidgets)
 BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5DocTools)
 
 %description
 Kapman is a clone of the well known game Pac-Man.
