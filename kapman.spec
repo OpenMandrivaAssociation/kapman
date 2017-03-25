@@ -1,12 +1,13 @@
 Name:		kapman
-Version:	16.12.2
+Version:	17.03.80
 Release:	1
 Epoch:		1
 Summary:	A Pac-Man clone
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://www.kde.org/applications/games/kapman/
-Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5NotifyConfig)
@@ -31,7 +32,7 @@ the next stage with slightly increased game speed.
 %files
 %doc %{_docdir}/HTML/*/kapman
 %{_bindir}/kapman
-%{_datadir}/appdata/org.kde.kapman.appdata.xml
+%{_datadir}/metainfo/org.kde.kapman.appdata.xml
 %{_datadir}/applications/org.kde.kapman.desktop
 %{_iconsdir}/hicolor/*/apps/kapman.png
 %{_datadir}/kapman
