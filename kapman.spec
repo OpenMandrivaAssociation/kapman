@@ -1,5 +1,5 @@
 Name:		kapman
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Epoch:		1
 Summary:	A Pac-Man clone
@@ -29,8 +29,7 @@ ghost. By eating an energizer, Kapman gets the ability to eat ghosts for a few
 seconds. When a stage is cleared of pills and energizer the player is taken to
 the next stage with slightly increased game speed.
 
-%files
-%doc %{_docdir}/HTML/*/kapman
+%files -f %{name}.lang
 %{_bindir}/kapman
 %{_datadir}/metainfo/org.kde.kapman.appdata.xml
 %{_datadir}/applications/org.kde.kapman.desktop
@@ -50,3 +49,4 @@ the next stage with slightly increased game speed.
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-html
