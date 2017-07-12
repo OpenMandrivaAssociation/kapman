@@ -1,5 +1,5 @@
 Name:		kapman
-Version:	17.04.2
+Version:	17.04.3
 Release:	1
 Epoch:		1
 Summary:	A Pac-Man clone
