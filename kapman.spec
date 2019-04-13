@@ -1,6 +1,6 @@
 Name:		kapman
-Version:	 18.12.3
-Release:	2
+Version:	 19.04.0
+Release:	1
 Epoch:		1
 Summary:	A Pac-Man clone
 Group:		Graphical desktop/KDE
