@@ -1,5 +1,5 @@
 Name:		kapman
-Version:	 19.04.1
+Version:	 19.04.2
 Release:	1
 Epoch:		1
 Summary:	A Pac-Man clone
