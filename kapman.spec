@@ -1,5 +1,5 @@
 Name:		kapman
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 Epoch:		1
 Summary:	A Pac-Man clone
@@ -7,7 +7,7 @@ Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://www.kde.org/applications/games/kapman/
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Widgets)
@@ -55,3 +55,6 @@ the next stage with slightly increased game speed.
 %install
 %ninja_install -C build
 %find_lang %{name} --with-html
+
+# FIXME workaround for gdb 8.3.1 hang
+strip --strip-unneeded %{buildroot}%{_bindir}/kapman
