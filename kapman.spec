@@ -1,5 +1,5 @@
 Name:		kapman
-Version:	20.12.3
+Version:	21.03.80
 Release:	1
 Epoch:		1
 Summary:	A Pac-Man clone
@@ -40,7 +40,6 @@ the next stage with slightly increased game speed.
 %{_datadir}/applications/org.kde.kapman.desktop
 %{_iconsdir}/hicolor/*/apps/kapman.png
 %{_datadir}/kapman
-%{_datadir}/kxmlgui5/kapman/kapmanui.rc
 %{_datadir}/sounds/kapman
 
 #------------------------------------------------------------------------------
