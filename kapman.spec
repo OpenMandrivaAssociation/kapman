@@ -1,5 +1,5 @@
 Name:		kapman
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 Epoch:		1
 Summary:	A Pac-Man clone
