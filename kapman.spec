@@ -1,5 +1,5 @@
 Name:		kapman
-Version:	22.07.90
+Version:	22.08.0
 Release:	1
 Epoch:		1
 Summary:	A Pac-Man clone
