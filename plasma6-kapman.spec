@@ -8,7 +8,6 @@ License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://www.kde.org/applications/games/kapman/
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kapman-%{version}.tar.xz
-BuildRequires:	libkdegames-devel
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6Svg)
@@ -24,7 +23,7 @@ BuildRequires:	cmake(KF6ConfigWidgets)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6KIO)
 BuildRequires:	cmake(KF6DocTools)
-BuildRequires:	cmake(KF6KDEGames)
+BuildRequires:	cmake(KDEGames6)
 
 %description
 Kapman is a clone of the well known game Pac-Man.
@@ -34,7 +33,7 @@ ghost. By eating an energizer, Kapman gets the ability to eat ghosts for a few
 seconds. When a stage is cleared of pills and energizer the player is taken to
 the next stage with slightly increased game speed.
 
-%files -f %{name}.lang
+%files -f kapman.lang
 %{_bindir}/kapman
 %{_datadir}/metainfo/org.kde.kapman.appdata.xml
 %{_datadir}/applications/org.kde.kapman.desktop
@@ -45,7 +44,7 @@ the next stage with slightly increased game speed.
 #------------------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n kapman-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
@@ -55,4 +54,4 @@ the next stage with slightly increased game speed.
 
 %install
 %ninja_install -C build
-%find_lang %{name} --with-html
+%find_lang kapman --with-html
