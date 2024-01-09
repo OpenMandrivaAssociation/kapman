@@ -11,6 +11,7 @@ Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kapman
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6Svg)
+BuildRequires:	cmake(Qt6SvgWidgets)
 BuildRequires:	cmake(KF6NotifyConfig)
 BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6Config)
