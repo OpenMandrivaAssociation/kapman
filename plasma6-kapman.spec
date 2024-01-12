@@ -1,7 +1,6 @@
 Name:		plasma6-kapman
-Version:	24.01.85
+Version:	24.01.90
 Release:	1
-Epoch:		1
 Summary:	A Pac-Man clone
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
