@@ -7,7 +7,7 @@ Release:	%{?git:0.%{git}.}1
 Summary:	A Pac-Man clone
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
-URL:		http://www.kde.org/applications/games/kapman/
+URL:		https://www.kde.org/applications/games/kapman/
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/games/kapman/-/archive/%{gitbranch}/kapman-%{gitbranchd}.tar.bz2#/kapman-%{git}.tar.bz2
