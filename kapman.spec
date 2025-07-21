@@ -2,7 +2,7 @@
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		kapman
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Summary:	A Pac-Man clone
 Group:		Graphical desktop/KDE
@@ -31,6 +31,10 @@ BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6KIO)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KDEGames6)
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
+%rename plasma6-kapman
 
 %description
 Kapman is a clone of the well known game Pac-Man.
@@ -40,25 +44,10 @@ ghost. By eating an energizer, Kapman gets the ability to eat ghosts for a few
 seconds. When a stage is cleared of pills and energizer the player is taken to
 the next stage with slightly increased game speed.
 
-%files -f kapman.lang
+%files -f %{name}.lang
 %{_bindir}/kapman
 %{_datadir}/metainfo/org.kde.kapman.appdata.xml
 %{_datadir}/applications/org.kde.kapman.desktop
 %{_iconsdir}/hicolor/*/apps/kapman.png
 %{_datadir}/kapman
 %{_datadir}/sounds/kapman
-
-#------------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kapman-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang kapman --with-html
